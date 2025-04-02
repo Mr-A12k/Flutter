@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Notification());
+  runApp(const NotificationPage());
 }
 
-class Notification extends StatelessWidget {
-  const Notification({super.key});
+class NotificationPage extends StatelessWidget {
+  const NotificationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const NotificationsPage(),
+      home: const NotificationPagePagesPage(),
     );
   }
 }
 
-class NotificationsPage extends StatelessWidget {
-  const NotificationsPage({super.key});
+class NotificationPagePagesPage extends StatelessWidget {
+  const NotificationPagePagesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class NotificationsPage extends StatelessWidget {
           onPressed: () {},
         ),
         title: const Text(
-          "Notifications",
+          "NotificationPage",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
@@ -43,15 +43,15 @@ class NotificationsPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               sectionTitle("Today"),
-              notificationCard("Work submitted", "Dispose the wastes", "2 Days ago", Colors.green[300]!),
-              notificationCard("Work not submitted", "Dispose the wastes", "2 Days ago", Colors.orange[300]!),
+              NotificationPagePageCard("Work submitted", "Dispose the wastes", "2 Days ago", Colors.green[300]!),
+              NotificationPagePageCard("Work not submitted", "Dispose the wastes", "2 Days ago", Colors.orange[300]!),
               const SizedBox(height: 10),
               sectionTitle("Yesterday"),
-              notificationCard("Work submitted", "Dispose the wastes", "2 Days ago", Colors.green[300]!),
-              notificationCard("Work in progress", "Dispose the wastes", "2 Days ago", Colors.grey[300]!),
-              notificationCard("Work not submitted", "Dispose the wastes", "2 Days ago", Colors.orange[300]!),
-              notificationCard("Work submitted", "Dispose the wastes", "2 Days ago", Colors.green[300]!),
-              notificationCard("Work submitted", "Dispose the wastes", "2 Days ago", Colors.green[300]!),
+              NotificationPagePageCard("Work submitted", "Dispose the wastes", "2 Days ago", Colors.green[300]!),
+              NotificationPagePageCard("Work in progress", "Dispose the wastes", "2 Days ago", Colors.grey[300]!),
+              NotificationPagePageCard("Work not submitted", "Dispose the wastes", "2 Days ago", Colors.orange[300]!),
+              NotificationPagePageCard("Work submitted", "Dispose the wastes", "2 Days ago", Colors.green[300]!),
+              NotificationPagePageCard("Work submitted", "Dispose the wastes", "2 Days ago", Colors.green[300]!),
             ],
           ),
         ),
@@ -63,7 +63,7 @@ class NotificationsPage extends StatelessWidget {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.NotificationPagePages), label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
         ],
       ),
@@ -80,7 +80,7 @@ class NotificationsPage extends StatelessWidget {
     );
   }
 
-  Widget notificationCard(String status, String task, String time, Color color) {
+  Widget NotificationPagePageCard(String status, String task, String time, Color color) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo/Govver/home1.dart';
-import 'package:demo/Govver/notification.dart';
+import 'package:demo/Govver/notification.dart' as customNotification;
 void main() {
   runApp(const taskScreen());
 }
@@ -177,7 +177,7 @@ class _DashboardPageState extends State<Dashboa> {
   final List<Widget> _pages = [
     MyApp(),
     taskScreen(),
-    Notification(),
+    customNotification.Notification(),
     
   ];
 
